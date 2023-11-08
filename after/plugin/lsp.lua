@@ -41,19 +41,18 @@ require("mason-lspconfig").setup({
 		"rust_analyzer",
 		"clangd",
 		"cssls",
-		-- "dartls", -- FIXME
 		"dockerls",
+        "dotls",
 		"gopls",
-		-- "hls",
+        "gradle_ls",
 		"html",
-		-- "java_language_server",
 		"jdtls",
 		"julials",
 		"kotlin_language_server",
 		"lua_ls",
 		"ocamllsp",
 		"pylsp",
-		-- "r_language_server",
+		"r_language_server",
 		"texlab"
 	},
 	handlers = {
