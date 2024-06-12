@@ -14,7 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{
 		"nvim-telescope/telescope.nvim", tag = "0.1.3",
-		dependencies = { "nvim-lua/plenary.nvim" }
+		dependencies = { "nvim-lua/plenary.nvim" },
+        file_ignore_patterns = { "build/." }
 	},
 	{
 		"folke/tokyonight.nvim",
@@ -22,6 +23,7 @@ require("lazy").setup({
 		priority = 1000,
 		opts = {},
 	},
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
@@ -34,7 +36,9 @@ require("lazy").setup({
 		dependencies = { "nvim-tree/nvim-web-devicons" }
 	},
 	{
-		"theprimeagen/harpoon"
+		"theprimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" }
 	},
 	{
 		"mbbill/undotree"

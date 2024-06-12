@@ -1,4 +1,4 @@
-vim.g.mapleader = " " -- easy to reach leader key
+vim.g.mapleader = " "                         -- easy to reach leader key
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- need nvim 0.8+
 
 -- vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
@@ -30,7 +30,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", function()
-	vim.lsp.buf.format()
+    vim.lsp.buf.format()
 end)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")

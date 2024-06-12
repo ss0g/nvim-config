@@ -19,7 +19,9 @@ lsp.on_attach(function(client, bufnr)
 --	print("help")
 	local opts = {buffer = bufnr, remap = false}
 
+	vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+	vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
 	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
 	vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
 	vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
@@ -50,7 +52,6 @@ require("mason-lspconfig").setup({
 		"julials",
 		"kotlin_language_server",
 		"lua_ls",
-		"ocamllsp",
 		"pylsp",
 		"r_language_server",
 		"texlab"
@@ -59,3 +60,25 @@ require("mason-lspconfig").setup({
 		lsp.default_setup
 	}
 })
+
+local jdtls_config = {
+    settings = {
+        java = {
+            format = {
+                settings = {
+                    url = vim.fn.getcwd(-1, -1) .. '/eclipse-formatter.xml'
+                }
+            }
+        }
+    }
+}
+
+local ocamllsp_config = {
+    cmd = { "ocamllsp" },
+    filetypes = { "ocaml", "menhir", "ocamlinterface", "ocamllex", "reason", "dune" },
+    root_dir = require("lspconfig").util.root_pattern("*.opam", "esy.json", "package.json", ".git", "dune-project", "dune-workspace")
+}
+
+require("lspconfig").jdtls.setup(jdtls_config);
+require("lspconfig").ocamllsp.setup(ocamllsp_config)
+
