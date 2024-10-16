@@ -61,6 +61,16 @@ require("mason-lspconfig").setup({
 	}
 })
 
+local lua_ls_config = {
+    settings = {
+        diagnostics = {
+            globals = {
+                'vim'
+            }
+        }
+    }
+}
+
 local jdtls_config = {
     settings = {
         java = {
@@ -77,6 +87,7 @@ local ocamllsp_config = {
     cmd = { "ocamllsp" }
 }
 
+require("lspconfig").lua_ls.setup(lua_ls_config);
 require("lspconfig").jdtls.setup(jdtls_config);
-require("lspconfig").ocamllsp.setup(ocamllsp_config)
+require("lspconfig").ocamllsp.setup(ocamllsp_config);
 
