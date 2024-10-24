@@ -17,7 +17,15 @@ function ColorDark()
     ColorMyPencils(dark)
 end
 
-ColorMyPencils()
+-- ColorMyPencils()
+
+local hour = tonumber(os.date("%H", os.time()))
+
+if hour > 7 and hour < 20 then
+    ColorLight()
+else
+    ColorDark()
+end
 
 vim.api.nvim_create_user_command('Light', function() ColorMyPencils(light) end, { nargs = 0 })
 vim.api.nvim_create_user_command('Dark', function() ColorMyPencils(dark) end, { nargs = 0 })
