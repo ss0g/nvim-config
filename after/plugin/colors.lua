@@ -7,7 +7,8 @@ function ColorMyPencils(color)
 end
 
 local light = 'catppuccin-latte'
-local dark = 'tokyonight'
+-- local dark = 'tokyonight'
+local dark = 'catppuccin-mocha'
 
 function ColorLight()
     ColorMyPencils(light)
@@ -21,11 +22,13 @@ end
 
 local hour = tonumber(os.date("%H", os.time()))
 
-if hour > 7 and hour < 20 then
+if hour > 7 and hour < 22 then
     ColorLight()
 else
     ColorDark()
 end
+
+-- ColorLight()
 
 vim.api.nvim_create_user_command('Light', function() ColorMyPencils(light) end, { nargs = 0 })
 vim.api.nvim_create_user_command('Dark', function() ColorMyPencils(dark) end, { nargs = 0 })
