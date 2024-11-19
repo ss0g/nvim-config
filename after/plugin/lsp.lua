@@ -38,23 +38,7 @@ end)
 require("mason").setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"tsserver",
-		"eslint",
-		"rust_analyzer",
-		"clangd",
-		"cssls",
-		"dockerls",
-        "dotls",
-		"gopls",
-        "gradle_ls",
-		"html",
-		"jdtls",
-		"julials",
-		"kotlin_language_server",
 		"lua_ls",
-		"pylsp",
-		"r_language_server",
-		"texlab"
 	},
 	handlers = {
 		lsp.default_setup
