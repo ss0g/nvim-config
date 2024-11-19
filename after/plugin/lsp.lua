@@ -96,12 +96,14 @@ local arduino_ls_config = {
     }
 }
 
--- local clangd_config = {
---     cmd = { "clangd -xc" }
--- }
+local hls_config = {
+    cmd = {
+        "/usr/bin/env", "haskell-language-server"
+    }
+}
 
 require("lspconfig").lua_ls.setup(lua_ls_config);
 require("lspconfig").jdtls.setup(jdtls_config);
 require("lspconfig").ocamllsp.setup(ocamllsp_config);
 require("lspconfig").arduino_language_server.setup(arduino_ls_config);
--- require("lspconfig").clangd.setup(clangd_config);
+require("lspconfig").hls.setup(hls_config);
