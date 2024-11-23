@@ -65,11 +65,11 @@ require("lazy").setup({
 	{
 		"tpope/vim-fugitive"
 	},
-    {
-        "mrcjkb/haskell-tools.nvim",
-        version = "^4",
-        lazy = false,
-    },
+    -- {
+    --     "mrcjkb/haskell-tools.nvim",
+    --     version = "^4",
+    --     lazy = false,
+    -- },
 	{
 		"williamboman/mason.nvim",
 		lazy = false
