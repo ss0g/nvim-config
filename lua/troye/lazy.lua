@@ -27,6 +27,7 @@ require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		opts = {
+            style = "night",
             transparent = true,
             styles = {
                 sidebars = "transparent",
@@ -34,7 +35,6 @@ require("lazy").setup({
             }
         },
 	},
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
@@ -45,8 +45,6 @@ require("lazy").setup({
         event = "VeryLazy",
         enabled = vim.fn.has("nvim-0.10.0") == 1,
     },
-    -- { "folke/twilight.nvim", opts = {}},
-    -- { "folke/zen-mode.nvim", opts = {}},
 	{
 		"nvim-treesitter/playground"
 	},
