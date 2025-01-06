@@ -46,7 +46,7 @@ require("lazy").setup({
         enabled = vim.fn.has("nvim-0.10.0") == 1,
     },
     -- { "folke/twilight.nvim", opts = {}},
-    { "folke/zen-mode.nvim", opts = {}},
+    -- { "folke/zen-mode.nvim", opts = {}},
 	{
 		"nvim-treesitter/playground"
 	},
