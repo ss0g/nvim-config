@@ -17,6 +17,7 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
         file_ignore_patterns = {
             "^build/",
+            "^target/",
             "^%_build/",
             "^%_opam/",
             "^%.git/"
