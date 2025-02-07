@@ -4,6 +4,8 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- need nvim 0.8+
 -- vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
 vim.keymap.set("n", "<leader>u", ":UndotreeShow<CR>")
 
+vim.keymap.set("n", "<leader>`", ":silent ! tmux neww -c `pwd`<CR>")
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
 

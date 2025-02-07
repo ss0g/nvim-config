@@ -35,6 +35,9 @@ require("lazy").setup({
             }
         },
 	},
+    {
+        "junegunn/seoul256.vim",
+    },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
