@@ -1,5 +1,7 @@
 local lsp = require("lsp-zero")
 
+vim.g.tex_flavor = "latex"
+
 lsp.preset("recommended")
 
 local cmp = require("cmp")
